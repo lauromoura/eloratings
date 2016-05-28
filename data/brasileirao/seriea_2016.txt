@@ -1,0 +1,33 @@
+Date HomeTeam AwayTeam HomeScore AwayScore
+14/05/2016 Flamengo Sport 1 0
+14/05/2016 Palmeiras AtleticoPR 4 0
+14/05/2016 AtleticoMG Santos 1 0
+14/05/2016 Coritiba Cruzeiro 1 0
+15/05/2016 Botafogo SaoPaulo 0 1
+15/05/2016 SantaCruz Vitoria 4 1
+15/05/2016 Corinthians Gremio 0 0
+15/05/2016 Figueirense PontePreta 0 0
+15/05/2016 AmericaMG Fluminense 0 1
+15/05/2016 Internacional Chapecoense 0 0
+
+21/05/2016 PontePreta Palmeiras 2 1
+21/05/2016 Fluminense SantaCruz 2 2
+21/05/2016 Cruzeiro Figueirense 2 2
+22/05/2016 Santos Coritiba 2 1
+22/05/2016 AtleticoPR AtleticoMG 1 1
+22/05/2016 Vitoria Corinthians 3 2
+22/05/2016 SaoPaulo Internacional 1 2
+22/05/2016 Gremio Flamengo 1 0
+22/05/2016 Chapecoense AmericaMG 3 1
+22/05/2016 Sport Botafogo 1 1
+
+25/05/2016 Botafogo AtleticoPR 2 1
+25/05/2016 Figueirense Santos 2 2
+25/05/2016 Flamengo Chapecoense 2 2
+25/05/2016 AmericaMG Vitoria 1 1
+25/05/2016 Palmeiras Fluminense 2 0
+25/05/2016 Coritiba SaoPaulo 1 1
+25/05/2016 SantaCruz Cruzeiro 4 1
+26/05/2016 Corinthians PontePreta 3 0
+26/05/2016 Internacional Sport 1 0
+26/05/2016 AtleticoMG Gremio 0 3
