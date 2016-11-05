@@ -1,7 +1,13 @@
 import unittest
-from elo import play_match
+from elo import play_match, draw_chance
 
 class TestElo(unittest.TestCase):
+
+    def test_draw_chance(self):
+        self.assertAlmostEqual(draw_chance(1.0), 0.125)
+        self.assertAlmostEqual(draw_chance(0.0), 0.125)
+        self.assertAlmostEqual(draw_chance(0.5), 0.25)
+
 
     def test_simple_draw(self):
         # March 29th, 2016

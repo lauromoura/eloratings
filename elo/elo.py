@@ -1,5 +1,7 @@
 '''elo.py - Calculate elo ratings based on World Football Elo'''
 
+import random
+
 HOME_FACTOR = 100
 
 WIN = 1.0
@@ -7,9 +9,10 @@ DRAW = 0.5
 LOSS = 0.0
 
 
-def expected_probabilities(home_elo, away_elo):
+def expected_probabilities(home_elo, away_elo, neutral=False):
     '''Calculates the probabilities of winning for each elo rating.'''
-    difference = (away_elo - (home_elo + HOME_FACTOR)) / 400.0
+    modifier = HOME_FACTOR if not neutral else 0
+    difference = (away_elo - (home_elo + modifier)) / 400.0
     home_prob = 1.0 / (1 + 10**difference)
     away_prob = 1.0 - home_prob
 
@@ -44,10 +47,10 @@ def new_ratings(elo, outcome, prob, k):
     return round(elo + k * factor)
 
 
-def play_match(home_elo, away_elo, home_goals, away_goals, level=40):
+def play_match(home_elo, away_elo, home_goals, away_goals, level=40, neutral=False):
     '''Evaluates a match and returns the updated elo ratings'''
 
-    home_prob, away_prob = expected_probabilities(home_elo, away_elo)
+    home_prob, away_prob = expected_probabilities(home_elo, away_elo, neutral)
 
     goal_difference = abs(home_goals - away_goals)
 
@@ -56,6 +59,54 @@ def play_match(home_elo, away_elo, home_goals, away_goals, level=40):
     home_outcome, away_outcome = outcomes_factor(home_goals, away_goals)
 
     home_new = new_ratings(home_elo, home_outcome, home_prob, k)
+    home_swing = k * (home_outcome - home_prob)
+    # print("Home swing value: %.2f" % home_swing)
     away_new = new_ratings(away_elo, away_outcome, away_prob, k)
+    away_swing = k * (away_outcome - away_prob)
+    # print("Away swing value: %.2f" % away_swing)
 
     return round(home_new), round(away_new)
+
+
+def draw_chance(elo_win_prob):
+    '''Gives the chance of a draw happening given a elo win probability'''
+    a = -0.8
+    b = 0.8
+    c = 0.05
+    return a * elo_win_prob ** 2 + b * elo_win_prob + c
+
+def actual_chance_of_winning(elo_win_prob, draw_prob=None):
+    '''Gives the actual chance of the home team winning'''
+
+    if not draw_prob:
+        draw_prob = draw_chance(elo_win_prob)
+
+    #return elo_win_prob - (draw_prob * elo_win_prob)
+    return elo_win_prob * (1 - draw_prob)
+
+def random_chances(home_elo, away_elo, neutral=False):
+    home_prob, away_prob = expected_probabilities(home_elo, away_elo, neutral)
+
+    draw_prob = draw_chance(home_prob)
+    home_win = actual_chance_of_winning(home_prob, draw_prob)
+    away_win = 1 - draw_prob - home_win
+
+    return home_win, draw_prob, away_win
+
+def random_result(home_elo, away_elo, level=40, neutral=False):
+    home_prob, draw_prob, away_prob  = random_chances(home_elo, away_elo, neutral)
+
+    pick = random.random()
+
+    if pick < away_prob:
+        home_goals = 0
+        away_goals = 1
+    elif pick < away_prob + draw_prob:
+        home_goals = 0
+        away_goals = 0
+    else:
+        home_goals = 1
+        away_goals = 0
+
+    return home_goals, away_goals
+
