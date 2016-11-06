@@ -1,8 +1,283 @@
-<html>
-    <head>
-        <title>Brasileirao 2016 Elo Ratings</title>
-    </head>
-    <body>
-        Hello, world!
-    </body>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Ranking do Brasileirão 2016</title>
+  <style type="text/css">code{white-space: pre;}
+
+    ol li div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .safe {
+        background-color: chartreuse;
+    }
+    .mostly_safe {
+        background-color: greenyellow;
+    }
+    .unlikely {
+        background-color: yellow;
+    }
+    .difficult {
+        background-color: darkorange;
+    }
+    .very_difficult {
+        background-color: red;
+    }
+    .miracle {
+        background-color: darkred;
+        color: white;
+    }
+    .impossible {
+        background-color: black;
+        color: white;
+    }
+    
+  </style>
+</head>
+<body>
+<h1 id="elo-ratings-for-campeonato-brasileiro">Ranking Elo Campeonato Brasileiro 2016</h1>
+
+<p>Apesar do campeonato de pontos corridos mostrar quem foi o melhor <b>ao longo do campeonato</b>,
+muitas vezes nos perguntamos qual é o melhor time no momento. Para ajudar nessa discussão podemos utilizar o Elo,
+um sistema desenvolvido para ranquear jogadores em competições de confronto direto. O Elo foi desenvolvido originalmente
+para jogadores de xadrez, mas é utilizado em jogos de video game, seleções de futebol, NFL, NBA, etc.</p>
+
+<p>O Elo atribui um valor numérico para um jogador, onde 1500 é um jogador "mediano", e valores mais altos significam
+um nível maior. A diferença entre nível dos jogadores determina a eventual probabilidade do jogador de nível mais alto ganhar
+e qual o impacto do resultado do jogo terá no nível dos jogadores. Com isso, um time de nível muito alto ganha poucos pontos
+ao vencer um time mais fraco. Afinal, não fez mais do que sua obrigação. Já um time fraco "rouba" muitos pontos ao vencer um time
+de nível mais alto, afinal esse foi um resultado inesperado e indica que o ranking não estava tão preciso assim. Além disso,
+a margem de vitória também influencia no quanto o nível dos dois times irá mudar após a atualização.</p>
+
+<p>A "versão" do Elo escolhida foi a do <a href="http://www.eloratings.net/system.html">World Football Elo Ratings</a>, que
+acompanha as seleções nacionais de futebol. Nela, o time da casa ganha 100 pontos de nível automaticamente. Isso significa que,
+dados dois times de nível semelhante, é esperada vitória do time da casa em aproximadamente metade dos jogos.</p>
+
+<p>Para o ranking inicial, foi utilizada a classificação final do Brasileirão 2015 e o G4 da Série B, com o campeão Corinthians
+recebendo 1545 pontos e cada time seguinte recebendo 5 a menos, até o América-MG, com 1450.</p>
+
+<h2 id="current-ranking">Ranking atual</h2>
+
+<ol>
+    
+    <li>Palmeiras - 1674</li>
+    
+    <li>Santos - 1646</li>
+    
+    <li>Flamengo - 1634</li>
+    
+    <li>AtleticoMG - 1609</li>
+    
+    <li>Botafogo - 1599</li>
+    
+    <li>AtleticoPR - 1529</li>
+    
+    <li>SaoPaulo - 1511</li>
+    
+    <li>Gremio - 1508</li>
+    
+    <li>Fluminense - 1504</li>
+    
+    <li>Cruzeiro - 1501</li>
+    
+    <li>Corinthians - 1484</li>
+    
+    <li>Coritiba - 1482</li>
+    
+    <li>Chapecoense - 1454</li>
+    
+    <li>PontePreta - 1452</li>
+    
+    <li>Sport - 1452</li>
+    
+    <li>Internacional - 1433</li>
+    
+    <li>Vitoria - 1425</li>
+    
+    <li>Figueirense - 1391</li>
+    
+    <li>AmericaMG - 1366</li>
+    
+    <li>SantaCruz - 1296</li>
+    
+</ol>
+
+<h2 id="predictions">Previsão da classificação final</h2>
+
+        <p>Partindo do ranking atual, as partidas seguintes foram simuladas 100 mil vezes,
+        com o resultado de cada jogo sendo determinado de acordo com as probabilidades do ELO.
+        Os placares usados foram, em caso de vitória do time da casa, 1-0, empate, 0-0, e vitória
+        do visitante, 0-1.</p>
+
+        <p>Os dados estão atualizados até os 2 primeiros jogos da rodada 34, no sábado 05/11/2016.</p>
+
+<h3 id="title-predictions">Título</h3>
+
+<ol>
+    
+    <li><div class="safe">
+            Palmeiras - 89.05</div></li>
+    
+    <li><div class="very_difficult">
+            Santos - 5.78</div></li>
+    
+    <li><div class="very_difficult">
+            Flamengo - 2.79</div></li>
+    
+    <li><div class="very_difficult">
+            AtleticoMG - 2.38</div></li>
+    
+</ol>
+
+<h3 id="title-predictions">G-6</h3>
+
+<ol>
+    
+    <li><div class="safe">
+            Palmeiras - 100.00</div></li>
+    
+    <li><div class="safe">
+            Santos - 100.00</div></li>
+    
+    <li><div class="safe">
+            Flamengo - 100.00</div></li>
+    
+    <li><div class="safe">
+            AtleticoMG - 99.98</div></li>
+    
+    <li><div class="safe">
+            Botafogo - 87.47</div></li>
+    
+    <li><div class="mostly_safe">
+            AtleticoPR - 50.53</div></li>
+    
+    <li><div class="unlikely">
+            Gremio - 28.37</div></li>
+    
+    <li><div class="difficult">
+            Corinthians - 17.98</div></li>
+    
+    <li><div class="difficult">
+            Fluminense - 14.00</div></li>
+    
+    <li><div class="very_difficult">
+            PontePreta - 1.18</div></li>
+    
+    <li><div class="miracle">
+            SaoPaulo - 0.38</div></li>
+    
+    <li><div class="miracle">
+            Chapecoense - 0.05</div></li>
+    
+    <li><div class="miracle">
+            Cruzeiro - 0.05</div></li>
+    
+    <li><div class="miracle">
+            Sport - 0.02</div></li>
+    
+    <li><div class="miracle">
+            Internacional - 0.00</div></li>
+    
+    <li><div class="impossible">
+            AmericaMG - 0.00</div></li>
+    
+    <li><div class="impossible">
+            Coritiba - 0.00</div></li>
+    
+    <li><div class="impossible">
+            Figueirense - 0.00</div></li>
+    
+    <li><div class="impossible">
+            SantaCruz - 0.00</div></li>
+    
+    <li><div class="impossible">
+            Vitoria - 0.00</div></li>
+    
+</ol>
+
+<h3 id="title-predictions">Rebaixamento</h3>
+
+<ol>
+    
+    <li><div class="safe">
+            AtleticoMG - 0.00</div></li>
+    
+    <li><div class="safe">
+            AtleticoPR - 0.00</div></li>
+    
+    <li><div class="safe">
+            Botafogo - 0.00</div></li>
+    
+    <li><div class="safe">
+            Corinthians - 0.00</div></li>
+    
+    <li><div class="safe">
+            Flamengo - 0.00</div></li>
+    
+    <li><div class="safe">
+            Fluminense - 0.00</div></li>
+    
+    <li><div class="safe">
+            Gremio - 0.00</div></li>
+    
+    <li><div class="safe">
+            Palmeiras - 0.00</div></li>
+    
+    <li><div class="safe">
+            Santos - 0.00</div></li>
+    
+    <li><div class="mostly_safe">
+            SaoPaulo - 0.00</div></li>
+    
+    <li><div class="mostly_safe">
+            PontePreta - 0.02</div></li>
+    
+    <li><div class="mostly_safe">
+            Chapecoense - 1.26</div></li>
+    
+    <li><div class="mostly_safe">
+            Cruzeiro - 2.77</div></li>
+    
+    <li><div class="mostly_safe">
+            Sport - 6.38</div></li>
+    
+    <li><div class="unlikely">
+            Coritiba - 10.27</div></li>
+    
+    <li><div class="difficult">
+            Internacional - 30.62</div></li>
+    
+    <li><div class="very_difficult">
+            Vitoria - 58.79</div></li>
+    
+    <li><div class="miracle">
+            Figueirense - 89.96</div></li>
+    
+    <li><div class="miracle">
+            AmericaMG - 99.92</div></li>
+    
+    <li><div class="impossible">
+            SantaCruz - 100.00</div></li>
+    
+</ol>
+
+<h2 id="things-to-do">TODO</h2>
+<ul>
+<li>Refactor and publish actual code</li>
+<li>Define a way to measure the accuracy of the predictions.</li>
+<li>Define a persistence schema to avoid recalculate everything.</li>
+<li>Support neutral field matches.</li>
+<li>Estimate the impact of rivalry games.</li>
+</ul>
+
+<h2 id="contact">Contato</h2>
+<ul>
+    <li><a href="http://twitter.com/lauromoura">Twitter</a>
+    <li><a href="http://github.com/lauromoura">Github</a>
+    <li><a href="http://github.com/lauromoura/eloratings">Projeto no Github</a>
+</body>
 </html>
