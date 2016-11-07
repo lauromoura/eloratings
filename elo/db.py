@@ -49,8 +49,8 @@ class Championship:
         # the initial.csv to make the teams the index?
         return self.initial[self.initial["Team"] == team].iloc[0].Rating
 
-    def latest_elo(self, elos, team, date=None): # FIXME remove date arg
-        team_elos = elos[team].dropna()
+    def latest_elo(self, team):
+        team_elos = self.ratings[team].dropna()
 
         x = team_elos.iloc[-1:]
         return x[0]
@@ -63,6 +63,7 @@ class Championship:
 
         teams = matches["HomeTeam"].unique()
         ratings = pd.DataFrame();
+        self.ratings = ratings
 
         for team in teams:
             ratings.loc[initial_date, team] = self.initial_for_team(team)
@@ -71,8 +72,8 @@ class Championship:
             home = match.HomeTeam
             away = match.AwayTeam
 
-            pre_match_home_elo = self.latest_elo(ratings, home, match.Date)
-            pre_match_away_elo = self.latest_elo(ratings, away, match.Date)
+            pre_match_home_elo = self.latest_elo(home)
+            pre_match_away_elo = self.latest_elo(away)
 
             home_new, away_new = elo.play_match(
                 pre_match_home_elo,
@@ -91,14 +92,12 @@ class Championship:
         for i in ratings.columns:
             ratings[i].fillna(method='ffill').plot(linewidth=2)
 
-        self.ratings = ratings
-
         return ratings
 
     def current_ranking(self):
         data = {}
         for team in self.ratings:
-            data[team] = self.latest_elo(self.ratings, team)
+            data[team] = self.latest_elo(team)
 
         return data
 
@@ -123,8 +122,8 @@ class Championship:
             # print(i)
             # print(i.HomeTeam)
 
-            home_elo = new.latest_elo(new.ratings, i.HomeTeam, i.Date)
-            away_elo = new.latest_elo(new.ratings, i.AwayTeam, i.Date)
+            home_elo = new.latest_elo(i.HomeTeam)
+            away_elo = new.latest_elo(i.AwayTeam)
 
             # print(home_elo + 100 - away_elo)
             home_goals, away_goals = elo.random_result(home_elo, away_elo)
