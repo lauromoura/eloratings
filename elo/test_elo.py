@@ -1,13 +1,13 @@
 import unittest
 from elo import play_match, draw_chance
 
+
 class TestElo(unittest.TestCase):
 
     def test_draw_chance(self):
-        self.assertAlmostEqual(draw_chance(1.0), 0.125)
-        self.assertAlmostEqual(draw_chance(0.0), 0.125)
+        self.assertAlmostEqual(draw_chance(1.0), 0.05)
+        self.assertAlmostEqual(draw_chance(0.0), 0.05)
         self.assertAlmostEqual(draw_chance(0.5), 0.25)
-
 
     def test_simple_draw(self):
         # March 29th, 2016
@@ -23,21 +23,19 @@ class TestElo(unittest.TestCase):
                                     away_goals),
                          expected)
 
-
     def test_big_home_win(self):
         # March 29th, 2016
         # Japan 5-0 Syria in Japan, Normal level (WC qualifier)
         expected = (1749, 1508)
         home_goals = 5
         away_goals = 0
-        elo_delta = 11 # Change in home elo
+        elo_delta = 11  # Change in home elo
 
         self.assertEqual(play_match(expected[0]-elo_delta,
                                     expected[1]+elo_delta,
                                     home_goals,
                                     away_goals),
                          expected)
-
 
     def test_narrow_away_win(self):
         # March 29th, 2016
@@ -53,7 +51,6 @@ class TestElo(unittest.TestCase):
                                     away_goals),
                          expected)
 
-
     def test_two_goal_win(self):
         # March 29, 2016
         # China 2-0 Qatar, in China, WC qualifier
@@ -67,7 +64,6 @@ class TestElo(unittest.TestCase):
                                     home_goals,
                                     away_goals),
                          expected)
-
 
     def test_three_goal_win(self):
         # March 29, 2016

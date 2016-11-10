@@ -8,6 +8,7 @@ from elo import elo
 
 from datetime import timedelta
 
+
 class Championship:
 
     @classmethod
@@ -25,7 +26,6 @@ class Championship:
         initial_df = pd.read_csv(initial_file, sep=" ", comment="#")
 
         rounds_df = pd.read_csv(rounds_file, sep=" ", parse_dates=["Date"])
-
 
         obj.path = path
         obj.matches = matches_df
@@ -62,7 +62,7 @@ class Championship:
         initial_date = matches["Date"].min() - timedelta(days=1)
 
         teams = matches["HomeTeam"].unique()
-        ratings = pd.DataFrame();
+        ratings = pd.DataFrame()
         self.ratings = ratings
 
         for team in teams:
@@ -81,14 +81,9 @@ class Championship:
                 match.HomeScore,
                 match.AwayScore)
 
-
             ratings.loc[match.Date, match.HomeTeam] = home_new
             ratings.loc[match.Date, match.AwayTeam] = away_new
-            # break
 
-
-        # for i in ["Flamengo", "Palmeiras", "Santos", "AtleticoMG"]:
-        # for i in "SaoPaulo Cruzeiro Sport Coritiba Internacional Vitoria Figueirense AmericaMG SantaCruz".split():
         for i in ratings.columns:
             ratings[i].fillna(method='ffill').plot(linewidth=2)
 
@@ -106,7 +101,7 @@ class Championship:
 
         clone.path = self.path
 
-        clone.matches= self.matches.copy()
+        clone.matches = self.matches.copy()
         clone.initial = self.initial.copy()
         clone.rounds = self.rounds.copy()
         clone.ratings = self.ratings.copy()
@@ -129,7 +124,7 @@ class Championship:
             home_goals, away_goals = elo.random_result(home_elo, away_elo)
 
             home_new_elo, away_new_elo = elo.play_match(home_elo, away_elo,
-                                                 home_goals, away_goals)
+                                                        home_goals, away_goals)
 
             # print(home_new_elo, away_new_elo)
 
@@ -159,8 +154,9 @@ class Championship:
         df = pd.DataFrame(columns=['Points', 'Games', 'HomeGames', 'AwayGames',
                                    'Wins', 'Draws', 'Losses',
                                    'GoalsFor', 'GoalsAgainst', 'GoalDiff',
-                                   'HomeGoalsFor', 'HomeGoalsAgainst', 'HomeGoalsDiff',
-                                   'AwayGoalsFor', 'AwayGoalsAgainst', 'AwayGoalsDiff'])
+                                   'HomeGoalsFor', 'HomeGoalsAgainst',
+                                   'HomeGoalsDiff', 'AwayGoalsFor',
+                                   'AwayGoalsAgainst', 'AwayGoalsDiff'])
 
         for team in matches['HomeTeam'].unique():
 
@@ -181,8 +177,9 @@ class Championship:
             away_goals_for = 0
             away_goals_against = 0
 
-            team_matches_filt = (matches['HomeTeam'] == team) | (matches['AwayTeam'] == team)
-            team_matches = matches[team_matches_filt]
+            is_home = matches['HomeTeam'] == team
+            is_away = matches['AwayTeam'] == team
+            team_matches = matches[is_home | is_away]
 
             for match in team_matches.itertuples():
                 if match.HomeTeam == team:
@@ -202,7 +199,6 @@ class Championship:
 
                     away_games += 1
 
-
                 games += 1
                 goals_for += team_goals
                 goals_against += other_goals
@@ -216,15 +212,14 @@ class Championship:
                 else:
                     losses += 1
 
-
             df.loc[team] = [points, games, home_games, away_games,
                             wins, draws, losses,
-                            goals_for, goals_against, goals_for - goals_against,
+                            goals_for, goals_against,
+                            goals_for - goals_against,
                             home_goals_for, home_goals_against,
                             home_goals_for - home_goals_against,
                             away_goals_for, away_goals_against,
                             away_goals_for - away_goals_against]
 
-        return df.sort_values(by=["Points","Wins","GoalDiff","GoalsFor"], ascending=False)
-
-
+        return df.sort_values(by=["Points", "Wins",
+                                  "GoalDiff", "GoalsFor"], ascending=False)

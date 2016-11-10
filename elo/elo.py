@@ -47,7 +47,8 @@ def new_ratings(elo, outcome, prob, k):
     return round(elo + k * factor)
 
 
-def play_match(home_elo, away_elo, home_goals, away_goals, level=40, neutral=False):
+def play_match(home_elo, away_elo, home_goals, away_goals, level=40,
+               neutral=False):
     '''Evaluates a match and returns the updated elo ratings'''
 
     home_prob, away_prob = expected_probabilities(home_elo, away_elo, neutral)
@@ -75,14 +76,15 @@ def draw_chance(elo_win_prob):
     c = 0.05
     return a * elo_win_prob ** 2 + b * elo_win_prob + c
 
+
 def actual_chance_of_winning(elo_win_prob, draw_prob=None):
     '''Gives the actual chance of the home team winning'''
 
     if not draw_prob:
         draw_prob = draw_chance(elo_win_prob)
 
-    #return elo_win_prob - (draw_prob * elo_win_prob)
     return elo_win_prob * (1 - draw_prob)
+
 
 def random_chances(home_elo, away_elo, neutral=False):
     home_prob, away_prob = expected_probabilities(home_elo, away_elo, neutral)
@@ -93,8 +95,10 @@ def random_chances(home_elo, away_elo, neutral=False):
 
     return home_win, draw_prob, away_win
 
+
 def random_result(home_elo, away_elo, level=40, neutral=False):
-    home_prob, draw_prob, away_prob  = random_chances(home_elo, away_elo, neutral)
+    home_prob, draw_prob, away_prob = random_chances(home_elo, away_elo,
+                                                     neutral)
 
     pick = random.random()
 
@@ -109,4 +113,3 @@ def random_result(home_elo, away_elo, level=40, neutral=False):
         away_goals = 0
 
     return home_goals, away_goals
-

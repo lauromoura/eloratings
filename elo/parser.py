@@ -11,6 +11,7 @@ def parse_date(date_str):
     '''Converts the datestring to a datetime object'''
     return datetime.strptime(date_str, DATE_FORMAT)
 
+
 def is_comment(row):
     return row[0].startswith('#')
 
@@ -53,7 +54,9 @@ def parse_matches(path):
     with open(filename) as csvfile:
         reader = csv.reader(csvfile, delimiter=' ')
         keys = next(reader)  # Skip header
-        return [parse_match(row, keys) for row in reader if row and not is_comment(row)]
+        return [parse_match(row, keys) for row in reader
+                if row and not is_comment(row)]
+
 
 def parse_initial(path):
     '''Parse the initial ratings. Returning a dict with the team as key'''
@@ -63,6 +66,7 @@ def parse_initial(path):
         reader = csv.reader(csvfile, delimiter=' ')
         keys = next(reader)  # Skip header
         return {t: int(r) for _, t, r in reader}
+
 
 def parse_fixtures(path):
     '''Parse future matches, returning a list of them'''
