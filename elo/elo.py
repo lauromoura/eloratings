@@ -60,21 +60,17 @@ def play_match(home_elo, away_elo, home_goals, away_goals, level=40,
     home_outcome, away_outcome = outcomes_factor(home_goals, away_goals)
 
     home_new = new_ratings(home_elo, home_outcome, home_prob, k)
-    home_swing = k * (home_outcome - home_prob)
-    # print("Home swing value: %.2f" % home_swing)
     away_new = new_ratings(away_elo, away_outcome, away_prob, k)
-    away_swing = k * (away_outcome - away_prob)
-    # print("Away swing value: %.2f" % away_swing)
 
     return round(home_new), round(away_new)
 
 
 def draw_chance(elo_win_prob):
     '''Gives the chance of a draw happening given a elo win probability'''
-    a = -0.8
-    b = 0.8
-    c = 0.05
-    return a * elo_win_prob ** 2 + b * elo_win_prob + c
+    quadratic = -0.8
+    linear = 0.8
+    constant = 0.05
+    return quadratic * elo_win_prob ** 2 + linear * elo_win_prob + constant
 
 
 def actual_chance_of_winning(elo_win_prob, draw_prob=None):
@@ -87,7 +83,16 @@ def actual_chance_of_winning(elo_win_prob, draw_prob=None):
 
 
 def random_chances(home_elo, away_elo, neutral=False):
-    home_prob, away_prob = expected_probabilities(home_elo, away_elo, neutral)
+    '''Gives the results chances as probabilities.
+
+    Based on the two elo ratings given and whether the match is in a neutral
+    field or not, this function calculates the probabilites of:
+
+        - home team winning
+        - draw
+        - away team winning
+    '''
+    home_prob, _, = expected_probabilities(home_elo, away_elo, neutral)
 
     draw_prob = draw_chance(home_prob)
     home_win = actual_chance_of_winning(home_prob, draw_prob)
@@ -96,9 +101,13 @@ def random_chances(home_elo, away_elo, neutral=False):
     return home_win, draw_prob, away_win
 
 
-def random_result(home_elo, away_elo, level=40, neutral=False):
-    home_prob, draw_prob, away_prob = random_chances(home_elo, away_elo,
-                                                     neutral)
+def random_result(home_elo, away_elo, neutral=False):
+    '''Returns the home and away goals for a simulated match.
+
+    Home results are 1-0, draws 0-0, and away win 0-1.
+    '''
+    _, draw_prob, away_prob = random_chances(home_elo, away_elo,
+                                             neutral)
 
     pick = random.random()
 
