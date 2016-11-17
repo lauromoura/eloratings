@@ -17,7 +17,6 @@ class Championship:
 
         matches_file = os.path.join(path, "matches.csv")
         initial_file = os.path.join(path, "initial.csv")
-        rounds_file = os.path.join(path, "rounds.csv")
 
         matches_df = pd.read_csv(matches_file, sep=" ",
                                  parse_dates=["Date"], dayfirst=True,
@@ -25,12 +24,9 @@ class Championship:
 
         initial_df = pd.read_csv(initial_file, sep=" ", comment="#")
 
-        rounds_df = pd.read_csv(rounds_file, sep=" ", parse_dates=["Date"])
-
         obj.path = path
         obj.matches = matches_df
         obj.initial = initial_df
-        obj.rounds = rounds_df
 
         obj.load_initial_elo()
 
@@ -103,7 +99,6 @@ class Championship:
 
         clone.matches = self.matches.copy()
         clone.initial = self.initial.copy()
-        clone.rounds = self.rounds.copy()
         clone.ratings = self.ratings.copy()
 
         return clone
