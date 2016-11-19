@@ -131,7 +131,7 @@ class Championship:
 
         return new
 
-    def standings(self, ):
+    def standings(self, simplified=True):
         '''Gives the standings with the current data.
 
         Tie break criteria:
@@ -146,12 +146,16 @@ class Championship:
 
         matches = self.complete_matches
 
-        df = pd.DataFrame(columns=['Points', 'Games', 'HomeGames', 'AwayGames',
-                                   'Wins', 'Draws', 'Losses',
-                                   'GoalsFor', 'GoalsAgainst', 'GoalDiff',
-                                   'HomeGoalsFor', 'HomeGoalsAgainst',
-                                   'HomeGoalsDiff', 'AwayGoalsFor',
-                                   'AwayGoalsAgainst', 'AwayGoalsDiff'])
+        columns=['Points', 'Games',
+                 'Wins', 'Draws', 'Losses',
+                 'GoalsFor', 'GoalsAgainst', 'GoalDiff']
+
+        if not simplified:
+            columns = columns + ['HomeGames', 'AwayGames',
+                                 'HomeGoalsFor', 'HomeGoalsAgainst',
+                                 'HomeGoalsDiff', 'AwayGoalsFor',
+                                 'AwayGoalsAgainst', 'AwayGoalsDiff']
+        df = pd.DataFrame(columns=columns)
 
         for team in matches['HomeTeam'].unique():
 
@@ -163,14 +167,15 @@ class Championship:
             points = 0
             games = 0
 
-            home_games = 0
-            away_games = 0
+            if not simplified:
+                home_games = 0
+                away_games = 0
 
-            home_goals_for = 0
-            home_goals_against = 0
+                home_goals_for = 0
+                home_goals_against = 0
 
-            away_goals_for = 0
-            away_goals_against = 0
+                away_goals_for = 0
+                away_goals_against = 0
 
             is_home = matches['HomeTeam'] == team
             is_away = matches['AwayTeam'] == team
@@ -181,18 +186,20 @@ class Championship:
                     team_goals = match.HomeScore
                     other_goals = match.AwayScore
 
-                    home_goals_for += team_goals
-                    home_goals_against += other_goals
+                    if not simplified:
+                        home_goals_for += team_goals
+                        home_goals_against += other_goals
 
-                    home_games += 1
+                        home_games += 1
                 else:
                     team_goals = match.AwayScore
                     other_goals = match.HomeScore
 
-                    away_goals_for += team_goals
-                    away_goals_against += other_goals
+                    if not simplified:
+                        away_goals_for += team_goals
+                        away_goals_against += other_goals
 
-                    away_games += 1
+                        away_games += 1
 
                 games += 1
                 goals_for += team_goals
@@ -207,14 +214,19 @@ class Championship:
                 else:
                     losses += 1
 
-            df.loc[team] = [points, games, home_games, away_games,
-                            wins, draws, losses,
-                            goals_for, goals_against,
-                            goals_for - goals_against,
+            row_data = [points, games,
+                        wins, draws, losses,
+                        goals_for, goals_against,
+                        goals_for - goals_against]
+
+            if not simplified:
+                row_data = row_data + [home_games, away_games,
                             home_goals_for, home_goals_against,
                             home_goals_for - home_goals_against,
                             away_goals_for, away_goals_against,
                             away_goals_for - away_goals_against]
+
+            df.loc[team] = row_data
 
         return df.sort_values(by=["Points", "Wins",
                                   "GoalDiff", "GoalsFor"], ascending=False)
