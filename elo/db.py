@@ -11,6 +11,9 @@ from datetime import timedelta
 
 class Championship:
 
+    SIMPLIFIED = True
+    COMPLETE = False
+
     @classmethod
     def from_directory(klass, path):
         obj = klass()

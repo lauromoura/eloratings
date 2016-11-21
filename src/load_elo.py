@@ -22,10 +22,12 @@ def main(argv=None):
         sys.exit(1)
 
     data = Championship.from_directory(argv[1])
+    print(data.standings())
 
     acc = defaultdict(list)
 
-    for n in range(100000):
+    N = 100
+    for n in range(N):
         print(n)
         standings = data.play_matches(n=100).standings()
 

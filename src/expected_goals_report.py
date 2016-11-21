@@ -24,11 +24,12 @@ def main(argv=None):
 
     data = Championship.from_directory(argv[1])
 
-    standings = data.standings()
+    standings = data.standings(Championship.COMPLETE)
     print(standings.sort_values(by='Points', ascending=False))
 
     matches = data.pending_matches
-    matches = matches[matches['Round'] == 35]
+    # FIXME Detect automatically the next matches
+    matches = matches[matches['Round'] == 36]
 
     attack = {}
     defense = {}
