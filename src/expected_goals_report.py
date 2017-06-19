@@ -69,20 +69,22 @@ def main(argv=None):
     def sorted_dict_by_value(d, reverse=False):
         return sorted(d, key=lambda k: d[k], reverse=reverse)
 
+
+    mask = '%.1f'
     print("Best attacks")
     for k in sorted_dict_by_value(attack, reverse=True):
-        print(k, attack[k])
+        print(k, mask % attack[k])
     print()
 
     print("Best defenses")
     for k in sorted_dict_by_value(defense):
-        print(k, defense[k])
+        print(k, mask % defense[k])
     print()
 
     print("Best diff")
 
     for k in sorted_dict_by_value(diff, reverse=True):
-        print(k, diff[k])
+        print(k, mask % diff[k])
 
     # print()
     # ratings = data.load_initial_elo()
