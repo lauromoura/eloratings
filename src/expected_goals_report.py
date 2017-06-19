@@ -53,7 +53,7 @@ def main(argv=None):
         expected_home_for = sqrt(home_average_goals_for * away_average_goals_against)
         expected_away_for = sqrt(away_average_goals_for * home_average_goals_against)
         print("Expected home goals factor for: %0.1f" % expected_home_for)
-        print("Expected away goals factor for: %0.1f" % expected_away_for)
+        print("Expected away goals factor for: %.1f" % expected_away_for)
         print("Expected TOTAL goals for: %0.1f" % (home_average_goals_for * away_average_goals_against + away_average_goals_for * home_average_goals_against))
 
         print()

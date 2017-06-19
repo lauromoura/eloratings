@@ -20,17 +20,17 @@ class Championship:
         matches_file = os.path.join(path, "matches.csv")
         initial_file = os.path.join(path, "initial.csv")
 
-        matches_df = pd.read_csv(matches_file, sep=" ",
+        matches_df = pd.read_csv(matches_file, sep=",",
                                  parse_dates=["Date"], dayfirst=True,
                                  comment="#")
 
-        initial_df = pd.read_csv(initial_file, sep=" ", comment="#")
+        initial_df = pd.read_csv(initial_file, sep=",", comment="#")
 
         obj.path = path
         obj.matches = matches_df
         obj.initial = initial_df
 
-        obj.load_initial_elo()
+        # obj.load_initial_elo()
 
         return obj
 
