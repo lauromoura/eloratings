@@ -139,6 +139,16 @@ Round,Date,HomeTeam,AwayTeam,HomeScore,AwayScore
 7,2017-06-14,Chapecoense,Vasco,,
 7,2017-06-15,Coritiba,Bahia,,
 7,2017-06-15,Fluminense,Grêmio,,
+8,2017-06-17,Atlético-GO,Atlético-PR,0,1
+8,2017-06-17,Vasco,Avaí,1,0
+8,2017-06-17,Santos,Ponte Preta,0,0
+8,2017-06-18,Coritiba,Corinthians,0,0
+8,2017-06-18,Fluminense,Flamengo,2,2
+8,2017-06-18,São Paulo,Atlético-MG,1,2
+8,2017-06-18,Bahia,Palmeiras,2,4
+8,2017-06-18,Chapecoense,Botafogo,0,2
+8,2017-06-18,Sport,Vitória,1,3
+8,2017-06-19,Cruzeiro,Grêmio,3,3
 8,2017-06-17,Atlético-GO,Atlético-PR,,
 8,2017-06-17,Vasco,Avaí,,
 8,2017-06-17,Santos,Ponte Preta,,
@@ -149,3 +159,13 @@ Round,Date,HomeTeam,AwayTeam,HomeScore,AwayScore
 8,2017-06-18,Chapecoense,Botafogo,,
 8,2017-06-18,Sport,Vitória,,
 8,2017-06-19,Cruzeiro,Grêmio,,
+9,2017-06-21,Vitória,Santos,,
+9,2017-06-21,Botafogo,Vasco,,
+9,2017-06-21,Palmeiras,Atlético-GO,,
+9,2017-06-21,Atlético-MG,Sport,,
+9,2017-06-21,Atlético-PR,São Paulo,,
+9,2017-06-21,Avaí,Fluminense,,
+9,2017-06-22,Corinthians,Bahia,,
+9,2017-06-22,Ponte Preta,Cruzeiro,,
+9,2017-06-22,Flamengo,Chapecoense,,
+9,2017-06-22,Grêmio,Coritiba,,
