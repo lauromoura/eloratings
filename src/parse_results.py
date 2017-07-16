@@ -46,7 +46,8 @@ def write_file(i, filename, writer):
             write_game(i, game, writer)
 
         for game in soup.find_all('div', class_='placar-jogo'):
-            write_game(i, game, writer, pending=True)
+            if not game.find_all('a'):
+                write_game(i, game, writer, pending=True)
 
 
 def main():
