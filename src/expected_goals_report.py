@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import sys
 import os
 import logging
@@ -28,7 +30,7 @@ def main(argv=None):
 
     matches = data.pending_matches
     # FIXME Detect automatically the next matches
-    matches = matches[matches['Round'] == 36]
+    matches = matches[matches['Round'] == int(argv[2])]
 
     attack = {}
     defense = {}
@@ -50,6 +52,16 @@ def main(argv=None):
         print("Away average goals for: %0.1f" % away_average_goals_for)
         print("Away average goals against: %0.1f" % away_average_goals_against)
 
+        # Maybe multiplication is not the best option for expected results
+        # due to zero
+        if home_average_goals_for == 0:
+            home_average_goals_for = 0.1
+        if home_average_goals_against == 0:
+            home_average_goals_against = 0.1
+        if away_average_goals_for == 0:
+            away_average_goals_for = 0.1
+        if away_average_goals_against == 0:
+            away_average_goals_against = 0.1
         expected_home_for = sqrt(home_average_goals_for * away_average_goals_against)
         expected_away_for = sqrt(away_average_goals_for * home_average_goals_against)
         print("Expected home goals factor for: %0.1f" % expected_home_for)
