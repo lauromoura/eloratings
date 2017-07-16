@@ -12,6 +12,11 @@ from collections import defaultdict
 
 from elo.db import Championship
 
+
+def harmmean(a, b):
+    return 2 / ((a**(-1)) + (b**(-1)))
+
+
 def main(argv=None):
 
     if argv is None:
@@ -35,6 +40,8 @@ def main(argv=None):
     attack = {}
     defense = {}
     diff = {}
+
+    team_data = {}
 
     for match in matches.itertuples():
         home = standings.loc[match.HomeTeam]
@@ -64,9 +71,12 @@ def main(argv=None):
             away_average_goals_against = 0.1
         expected_home_for = sqrt(home_average_goals_for * away_average_goals_against)
         expected_away_for = sqrt(away_average_goals_for * home_average_goals_against)
+        harm_expected_home_for = harmmean(home_average_goals_for, away_average_goals_against)
+        harm_expected_away_for = harmmean(away_average_goals_for, home_average_goals_against)
         print("Expected home goals factor for: %0.1f" % expected_home_for)
-        print("Expected away goals factor for: %.1f" % expected_away_for)
-        print("Expected TOTAL goals for: %0.1f" % (home_average_goals_for * away_average_goals_against + away_average_goals_for * home_average_goals_against))
+        print("Expected away goals factor for: %0.1f" % expected_away_for)
+        print("NEW Expected home goals factor for: %0.1f" % harm_expected_home_for)
+        print("NEW Expected away goals factor for: %0.1f" % harm_expected_away_for)
 
         print()
 
@@ -76,6 +86,9 @@ def main(argv=None):
         defense[match.AwayTeam] = expected_home_for
         diff[match.HomeTeam] = expected_home_for - expected_away_for
         diff[match.AwayTeam] = expected_away_for - expected_home_for
+
+        team_data[match.HomeTeam] = (attack[match.HomeTeam], defense[match.HomeTeam], diff[match.HomeTeam])
+        team_data[match.AwayTeam] = (attack[match.AwayTeam], defense[match.AwayTeam], diff[match.AwayTeam])
 
 
     def sorted_dict_by_value(d, reverse=False):
@@ -97,6 +110,11 @@ def main(argv=None):
 
     for k in sorted_dict_by_value(diff, reverse=True):
         print(k, mask % diff[k])
+
+    print("{:<10}\t{:>5}\t{:>5}\t{:>5}".format("Team", "Attack", "Defense", "Diff"))
+    for k in team_data:
+        d = team_data[k]
+        print("{:<10}\t{:5.1f}\t{:5.1f}\t{:5.1f}".format(k, d[0], d[1], d[2]))
 
     # print()
     # ratings = data.load_initial_elo()
