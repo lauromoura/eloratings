@@ -18,8 +18,6 @@ def main():
 
     args = parser.parse_args()
 
-    print(args.rounds)
-
     for r in range(1, args.rounds[0] + 1):
         print("dowloading round ", r)
 
