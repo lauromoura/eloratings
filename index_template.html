@@ -1,0 +1,122 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>Ranking do Brasileirão 2016</title>
+  <style type="text/css">code{white-space: pre;}
+
+    ol li div {
+        width: 100%;
+        height: 100%;
+    }
+
+    .safe {
+        background-color: chartreuse;
+    }
+    .mostly_safe {
+        background-color: greenyellow;
+    }
+    .unlikely {
+        background-color: yellow;
+    }
+    .difficult {
+        background-color: darkorange;
+    }
+    .very_difficult {
+        background-color: red;
+    }
+    .miracle {
+        background-color: darkred;
+        color: white;
+    }
+    .impossible {
+        background-color: black;
+        color: white;
+    }
+    
+  </style>
+</head>
+<body>
+<h1 id="elo-ratings-for-campeonato-brasileiro">Ranking Elo Campeonato Brasileiro 2016</h1>
+
+<p>Apesar do campeonato de pontos corridos mostrar quem foi o melhor <b>ao longo do campeonato</b>,
+muitas vezes nos perguntamos qual é o melhor time no momento. Para ajudar nessa discussão podemos utilizar o Elo,
+um sistema desenvolvido para ranquear jogadores em competições de confronto direto. O Elo foi desenvolvido originalmente
+para jogadores de xadrez, mas é utilizado em jogos de video game, seleções de futebol, NFL, NBA, etc.</p>
+
+<p>O Elo atribui um valor numérico para um jogador, onde 1500 é um jogador "mediano", e valores mais altos significam
+um nível maior. A diferença entre nível dos jogadores determina a eventual probabilidade do jogador de nível mais alto ganhar
+e qual o impacto do resultado do jogo terá no nível dos jogadores. Com isso, um time de nível muito alto ganha poucos pontos
+ao vencer um time mais fraco. Afinal, não fez mais do que sua obrigação. Já um time fraco "rouba" muitos pontos ao vencer um time
+de nível mais alto, afinal esse foi um resultado inesperado e indica que o ranking não estava tão preciso assim. Além disso,
+a margem de vitória também influencia no quanto o nível dos dois times irá mudar após a atualização.</p>
+
+<p>A "versão" do Elo escolhida foi a do <a href="http://www.eloratings.net/system.html">World Football Elo Ratings</a>, que
+acompanha as seleções nacionais de futebol. Nela, o time da casa ganha 100 pontos de nível automaticamente. Isso significa que,
+dados dois times de nível semelhante, é esperada vitória do time da casa em aproximadamente metade dos jogos.</p>
+
+<p>Para o ranking inicial, foi utilizada a classificação final do Brasileirão 2015 e o G4 da Série B, com o campeão Corinthians
+recebendo 1545 pontos e cada time seguinte recebendo 5 a menos, até o América-MG, com 1450.</p>
+
+<h2 id="current-ranking">Ranking atual</h2>
+
+<ol>
+    {% for team in current_ranking %}
+    <li>{{team['name']}} - {{team['points']}}</li>
+    {% endfor %}
+</ol>
+
+<h2 id="predictions">Previsão da classificação final</h2>
+
+        <p>Partindo do ranking atual, as partidas seguintes foram simuladas 100 mil vezes,
+        com o resultado de cada jogo sendo determinado de acordo com as probabilidades do ELO.
+        Os placares usados foram, em caso de vitória do time da casa, 1-0, empate, 0-0, e vitória
+        do visitante, 0-1.</p>
+
+        <p>Os dados estão atualizados com todos os jogos da rodada 36, segunda 21/11/2016.</p>
+
+<h3 id="title-predictions">Título</h3>
+
+<ol>
+    {% for team in title_teams %}
+    <li><div class="{{ team['class'] }}">
+            {{team['name']}} - {{'%0.2f' % team['chance']}}</div></li>
+    {% endfor %}
+</ol>
+
+<h3 id="title-predictions">G-6</h3>
+
+<ol>
+    {% for team in g6_teams %}
+    <li><div class="{{ team['class'] }}">
+            {{team['name']}} - {{'%0.2f' % team['chance']}}</div></li>
+    {% endfor %}
+</ol>
+
+<h3 id="title-predictions">Rebaixamento</h3>
+
+<ol>
+    {% for team in z4_teams %}
+    <li><div class="{{ team['class'] }}">
+            {{team['name']}} - {{'%0.2f' % team['chance']}}</div></li>
+    {% endfor %}
+</ol>
+
+<h2 id="things-to-do">TODO</h2>
+<ul>
+<li>Refactor and publish actual code</li>
+<li>Define a way to measure the accuracy of the predictions.</li>
+<li>Define a persistence schema to avoid recalculate everything.</li>
+<li>Support neutral field matches.</li>
+<li>Estimate the impact of rivalry games.</li>
+</ul>
+
+<h2 id="contact">Contato</h2>
+<ul>
+    <li><a href="http://twitter.com/lauromoura">Twitter</a>
+    <li><a href="http://github.com/lauromoura">Github</a>
+    <li><a href="http://github.com/lauromoura/eloratings">Projeto no Github</a>
+</body>
+</html>

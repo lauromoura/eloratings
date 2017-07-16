@@ -1,0 +1,141 @@
+Round,Date,HomeTeam,AwayTeam,HomeScore,AwayScore
+1,2017-05-13,Flamengo,Atlético-MG,1,1
+1,2017-05-13,Corinthians,Chapecoense,1,1
+1,2017-05-14,Fluminense,Santos,3,2
+1,2017-05-14,Palmeiras,Vasco,4,0
+1,2017-05-14,Cruzeiro,São Paulo,1,0
+1,2017-05-14,Bahia,Atlético-PR,6,2
+1,2017-05-14,Ponte Preta,Sport,4,0
+1,2017-05-14,Avaí,Vitória,0,0
+1,2017-05-14,Grêmio,Botafogo,2,0
+1,2017-05-15,Coritiba,Atlético-GO,4,1
+2,2017-05-20,Santos,Coritiba,1,0
+2,2017-05-20,Atlético-GO,Flamengo,0,3
+2,2017-05-20,Chapecoense,Palmeiras,1,0
+2,2017-05-21,Vasco,Bahia,2,1
+2,2017-05-21,Atlético-MG,Fluminense,1,2
+2,2017-05-21,Atlético-PR,Grêmio,0,2
+2,2017-05-21,Vitória,Corinthians,0,1
+2,2017-05-21,Botafogo,Ponte Preta,2,0
+2,2017-05-21,Sport,Cruzeiro,1,1
+2,2017-05-22,São Paulo,Avaí,2,0
+3,2017-05-27,Vasco,Fluminense,3,2
+3,2017-05-27,São Paulo,Palmeiras,2,0
+3,2017-05-27,Vitória,Coritiba,0,1
+3,2017-05-28,Atlético-MG,Ponte Preta,2,2
+3,2017-05-28,Santos,Cruzeiro,0,1
+3,2017-05-28,Atlético-PR,Flamengo,1,1
+3,2017-05-28,Atlético-GO,Corinthians,0,1
+3,2017-05-28,Sport,Grêmio,4,3
+3,2017-05-28,Botafogo,Bahia,1,0
+3,2017-05-29,Chapecoense,Avaí,2,0
+4,2017-06-03,Coritiba,Atlético-PR,1,0
+4,2017-06-03,Fluminense,Vitória,2,1
+4,2017-06-03,Corinthians,Santos,2,0
+4,2017-06-04,Flamengo,Botafogo,0,0
+4,2017-06-04,Avaí,Sport,1,0
+4,2017-06-04,Palmeiras,Atlético-MG,0,0
+4,2017-06-04,Grêmio,Vasco,2,0
+4,2017-06-04,Ponte Preta,São Paulo,1,0
+4,2017-06-04,Cruzeiro,Chapecoense,0,2
+4,2017-06-05,Bahia,Atlético-GO,3,0
+5,2017-06-06,Fluminense,Atlético-PR,1,1
+5,2017-06-07,Atlético-MG,Avaí,1,0
+5,2017-06-07,Coritiba,Palmeiras,1,0
+5,2017-06-07,Santos,Botafogo,1,0
+5,2017-06-07,Vasco,Corinthians,2,5
+5,2017-06-07,Sport,Flamengo,2,0
+5,2017-06-08,São Paulo,Vitória,2,0
+5,2017-06-08,Atlético-GO,Ponte Preta,3,0
+5,2017-06-08,Chapecoense,Grêmio,3,6
+5,2017-06-08,Bahia,Cruzeiro,1,0
+6,2017-06-10,Palmeiras,Fluminense,3,1
+6,2017-06-10,Vasco,Sport,2,1
+6,2017-06-11,Botafogo,Coritiba,2,2
+6,2017-06-11,Corinthians,São Paulo,3,2
+6,2017-06-11,Vitória,Atlético-MG,2,0
+6,2017-06-11,Ponte Preta,Chapecoense,3,2
+6,2017-06-11,Avaí,Flamengo,1,1
+6,2017-06-11,Cruzeiro,Atlético-GO,2,0
+6,2017-06-11,Atlético-PR,Santos,0,2
+6,2017-06-12,Grêmio,Bahia,1,0
+7,2017-06-14,Atlético-MG,Atlético-PR,0,1
+7,2017-06-14,Sport,São Paulo,0,0
+7,2017-06-14,Vitória,Botafogo,2,2
+7,2017-06-14,Atlético-GO,Avaí,3,1
+7,2017-06-14,Flamengo,Ponte Preta,2,0
+7,2017-06-14,Santos,Palmeiras,1,0
+7,2017-06-14,Corinthians,Cruzeiro,1,0
+7,2017-06-14,Chapecoense,Vasco,2,1
+7,2017-06-15,Coritiba,Bahia,0,0
+7,2017-06-15,Fluminense,Grêmio,0,2
+8,2017-06-17,Atlético-GO,Atlético-PR,0,1
+8,2017-06-17,Vasco,Avaí,1,0
+8,2017-06-17,Santos,Ponte Preta,0,0
+8,2017-06-18,Coritiba,Corinthians,0,0
+8,2017-06-18,Fluminense,Flamengo,2,2
+8,2017-06-18,São Paulo,Atlético-MG,1,2
+8,2017-06-18,Bahia,Palmeiras,2,4
+8,2017-06-18,Chapecoense,Botafogo,0,2
+8,2017-06-18,Sport,Vitória,1,3
+8,2017-06-19,Cruzeiro,Grêmio,3,3
+9,2017-06-21,Vitória,Santos,0,2
+9,2017-06-21,Botafogo,Vasco,3,1
+9,2017-06-21,Palmeiras,Atlético-GO,1,0
+9,2017-06-21,Atlético-MG,Sport,2,2
+9,2017-06-21,Atlético-PR,São Paulo,1,0
+9,2017-06-21,Avaí,Fluminense,0,3
+9,2017-06-22,Corinthians,Bahia,3,0
+9,2017-06-22,Ponte Preta,Cruzeiro,1,0
+9,2017-06-22,Flamengo,Chapecoense,5,1
+9,2017-06-22,Grêmio,Coritiba,2,0
+10,2017-06-24,Santos,Sport,0,1
+10,2017-06-25,Vasco,Atlético-GO,1,0
+10,2017-06-25,São Paulo,Fluminense,1,1
+10,2017-06-25,Cruzeiro,Coritiba,2,0
+10,2017-06-25,Atlético-PR,Vitória,4,1
+10,2017-06-25,Grêmio,Corinthians,0,1
+10,2017-06-25,Ponte Preta,Palmeiras,1,2
+10,2017-06-25,Bahia,Flamengo,0,1
+10,2017-06-25,Chapecoense,Atlético-MG,0,1
+10,2017-06-26,Botafogo,Avaí,0,2
+11,2017-07-01,Palmeiras,Grêmio,1,0
+11,2017-07-01,Atlético-GO,Santos,1,1
+11,2017-07-02,Flamengo,São Paulo,2,0
+11,2017-07-02,Corinthians,Botafogo,1,0
+11,2017-07-02,Atlético-MG,Cruzeiro,3,1
+11,2017-07-02,Sport,Atlético-PR,1,0
+11,2017-07-02,Vitória,Bahia,0,0
+11,2017-07-02,Coritiba,Vasco,2,2
+11,2017-07-02,Avaí,Ponte Preta,0,0
+11,2017-07-03,Fluminense,Chapecoense,3,3
+12,2017-07-08,Atlético-GO,Vitória,1,2
+12,2017-07-08,Vasco,Flamengo,0,1
+12,2017-07-08,Corinthians,Ponte Preta,2,0
+12,2017-07-09,Chapecoense,Atlético-PR,1,1
+12,2017-07-09,Cruzeiro,Palmeiras,3,1
+12,2017-07-09,Grêmio,Avaí,0,2
+12,2017-07-09,Bahia,Fluminense,1,1
+12,2017-07-09,Botafogo,Atlético-MG,1,1
+12,2017-07-09,Santos,São Paulo,3,2
+12,2017-07-10,Coritiba,Sport,0,3
+13,2017-07-12,Atlético-MG,Santos,0,1
+13,2017-07-12,Ponte Preta,Bahia,0,3
+13,2017-07-12,Fluminense,Botafogo,0,1
+13,2017-07-12,Palmeiras,Corinthians,0,2
+13,2017-07-12,Atlético-PR,Cruzeiro,0,2
+13,2017-07-12,Vitória,Vasco,1,4
+13,2017-07-13,Flamengo,Grêmio,0,1
+13,2017-07-13,São Paulo,Atlético-GO,2,2
+13,2017-07-13,Sport,Chapecoense,3,0
+13,2017-07-13,Avaí,Coritiba,1,4
+14,2017-07-15,Corinthians,Atlético-PR,,
+14,2017-07-16,Palmeiras,Vitória,,
+14,2017-07-16,Vasco,Santos,,
+14,2017-07-16,Cruzeiro,Flamengo,,
+14,2017-07-16,Grêmio,Ponte Preta,,
+14,2017-07-16,Atlético-GO,Atlético-MG,,
+14,2017-07-16,Chapecoense,São Paulo,,
+14,2017-07-16,Coritiba,Fluminense,,
+14,2017-07-16,Bahia,Avaí,,
+14,2017-07-17,Botafogo,Sport,,
