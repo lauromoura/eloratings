@@ -113,9 +113,9 @@ context = {
     'z4_teams': z4_teams,
 }
 
-print(df.describe())
+# print(df.describe())
 
-print(data.current_ranking())
+# print(data.current_ranking())
 
 with open('index.html', 'w') as handle:
     handle.write(template.render(context))

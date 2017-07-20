@@ -26,10 +26,10 @@ def main(argv=None):
 
     acc = defaultdict(list)
 
-    N = 100
+    N = int(argv[2])
     for n in range(N):
         print(n)
-        standings = data.play_matches(n=100).standings()
+        standings = data.play_matches(n=500).standings()
 
         for key in standings.index:
             position = standings.index.get_loc(key) + 1
