@@ -30,7 +30,7 @@ class Championship:
         obj.matches = matches_df
         obj.initial = initial_df
 
-        # obj.load_initial_elo()
+        obj.load_initial_elo()
 
         return obj
 
