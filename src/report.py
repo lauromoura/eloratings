@@ -34,6 +34,8 @@ def z_4_chances(data):
         if max(data.index) < 17:
             return 0.0
         else:
+            if data.index.contains(15): # Hackish for when 16 is missing...
+                return 100 - data.loc[15]
             return 100.0
 
 def positive_class(chances):
@@ -73,7 +75,7 @@ g6_teams = []
 
 for col in df:
     print(col)
-    team_data = (df[col].value_counts() / 1000).sort_index()
+    team_data = (df[col].value_counts() / df.shape[0] * 100).sort_index()
     at_least_chances = team_data.cumsum()
     print(at_least_chances)
     title = title_chances(team_data)
