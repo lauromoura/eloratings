@@ -145,10 +145,10 @@ Round,Date,HomeTeam,AwayTeam,HomeScore,AwayScore
 15,2017-07-19,Avaí,Corinthians,0,0
 15,2017-07-19,Flamengo,Palmeiras,2,2
 15,2017-07-19,São Paulo,Vasco,1,0
-15,2017-07-19,Atlético-MG,Bahia,0,1
-15,2017-07-20,Fluminense,Cruzeiro,,
-15,2017-07-20,Sport,Atlético-GO,,
-15,2017-07-20,Atlético-PR,Botafogo,,
+15,2017-07-19,Atlético-MG,Bahia,0,2
+15,2017-07-20,Fluminense,Cruzeiro,1,1
+15,2017-07-20,Sport,Atlético-GO,4,0
+15,2017-07-20,Atlético-PR,Botafogo,0,0
 16,2017-07-22,Vitória,Chapecoense,,
 16,2017-07-22,Flamengo,Coritiba,,
 16,2017-07-23,Santos,Bahia,,
@@ -161,12 +161,12 @@ Round,Date,HomeTeam,AwayTeam,HomeScore,AwayScore
 16,2017-07-24,São Paulo,Grêmio,,
 17,2017-07-29,Botafogo,São Paulo,,
 17,2017-07-29,Palmeiras,Avaí,,
-17,2017-07-29,Cruzeiro,Vitória,,
 17,2017-07-30,Chapecoense,Atlético-GO,,
 17,2017-07-30,Corinthians,Flamengo,,
 17,2017-07-30,Coritiba,Atlético-MG,,
 17,2017-07-30,Bahia,Sport,,
 17,2017-07-30,Ponte Preta,Fluminense,,
+17,2017-07-30,Cruzeiro,Vitória,,
 17,2017-07-30,Grêmio,Santos,,
 17,2017-07-31,Vasco,Atlético-PR,,
 18,2017-08-02,Sport,Fluminense,,
