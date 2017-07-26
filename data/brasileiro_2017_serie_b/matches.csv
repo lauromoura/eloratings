@@ -1,0 +1,291 @@
+Round,Date,HomeTeam,AwayTeam,HomeScore,AwayScore
+1,2017-05-12,CRB,Ceará,1,0
+1,2017-05-12,Guarani,Brasil de Pelotas,2,0
+1,2017-05-12,Juventude,Luverdense,2,1
+1,2017-05-12,Náutico,América-MG,0,0
+1,2017-05-13,ABC,Paraná,0,0
+1,2017-05-13,Criciúma,Santa Cruz,1,2
+1,2017-05-13,Londrina,Internacional,0,3
+1,2017-05-13,Boa Esporte,Vila Nova,0,1
+1,2017-05-13,Goiás,Figueirense,0,1
+1,2017-05-13,Paysandu,Oeste,2,0
+2,2017-05-16,Brasil de Pelotas,Londrina,1,1
+2,2017-05-16,Ceará,Boa Esporte,0,0
+2,2017-05-19,Paraná,Paysandu,0,0
+2,2017-05-19,Vila Nova,Juventude,0,0
+2,2017-05-19,América-MG,Goiás,1,1
+2,2017-05-20,Santa Cruz,Guarani,2,1
+2,2017-05-20,Figueirense,Náutico,3,0
+2,2017-05-20,Oeste,Criciúma,1,0
+2,2017-05-20,Luverdense,CRB,1,1
+2,2017-05-20,Internacional,ABC,1,1
+3,2017-05-23,CRB,Santa Cruz,1,0
+3,2017-05-23,Guarani,Figueirense,2,0
+3,2017-05-26,Criciúma,América-MG,1,3
+3,2017-05-26,Boa Esporte,Oeste,1,1
+3,2017-05-26,Goiás,Brasil de Pelotas,1,1
+3,2017-05-27,ABC,Vila Nova,1,0
+3,2017-05-27,Náutico,Ceará,0,2
+3,2017-05-27,Londrina,Luverdense,3,1
+3,2017-05-27,Paysandu,Internacional,1,0
+3,2017-05-27,Juventude,Paraná,2,1
+4,2017-05-16,Paraná,Goiás,2,0
+4,2017-05-30,Figueirense,Boa Esporte,0,2
+4,2017-05-30,Brasil de Pelotas,Náutico,2,0
+4,2017-06-02,América-MG,Paysandu,0,2
+4,2017-06-02,Oeste,CRB,2,0
+4,2017-06-02,Ceará,Londrina,1,0
+4,2017-06-03,Santa Cruz,ABC,2,1
+4,2017-06-03,Vila Nova,Guarani,3,1
+4,2017-06-03,Luverdense,Criciúma,0,0
+4,2017-06-03,Internacional,Juventude,1,1
+5,2017-06-06,ABC,Paysandu,2,1
+5,2017-06-06,Guarani,Boa Esporte,2,1
+5,2017-06-06,Juventude,Criciúma,1,0
+5,2017-06-06,Náutico,Oeste,1,1
+5,2017-06-06,Figueirense,Internacional,1,2
+5,2017-06-06,Goiás,Santa Cruz,2,1
+5,2017-06-06,Londrina,Paraná,1,1
+5,2017-06-06,América-MG,Ceará,1,0
+5,2017-06-06,Luverdense,Vila Nova,1,1
+5,2017-06-06,CRB,Brasil de Pelotas,0,1
+6,2017-06-09,Criciúma,CRB,1,0
+6,2017-06-09,Santa Cruz,Londrina,1,3
+6,2017-06-09,Vila Nova,América-MG,2,0
+6,2017-06-09,Paysandu,Goiás,0,1
+6,2017-06-10,Brasil de Pelotas,Ceará,2,3
+6,2017-06-10,Paraná,Guarani,0,1
+6,2017-06-10,Boa Esporte,Juventude,0,2
+6,2017-06-10,Internacional,Náutico,4,2
+6,2017-06-10,ABC,Figueirense,2,2
+6,2017-06-10,Oeste,Luverdense,0,0
+7,2017-06-13,Náutico,Paraná,1,2
+7,2017-06-13,Guarani,Paysandu,2,0
+7,2017-06-13,Londrina,Oeste,1,1
+7,2017-06-13,Figueirense,Criciúma,2,2
+7,2017-06-13,Goiás,Boa Esporte,4,1
+7,2017-06-13,Juventude,ABC,3,0
+7,2017-06-13,CRB,Vila Nova,1,2
+7,2017-06-13,Ceará,Santa Cruz,1,3
+7,2017-06-13,América-MG,Internacional,1,1
+7,2017-06-13,Luverdense,Brasil de Pelotas,4,0
+8,2017-06-16,Criciúma,Guarani,3,2
+8,2017-06-16,Ceará,Luverdense,1,1
+8,2017-06-16,Paraná,Figueirense,1,0
+8,2017-06-16,Goiás,ABC,1,2
+8,2017-06-17,Santa Cruz,Internacional,0,0
+8,2017-06-17,Boa Esporte,Náutico,2,1
+8,2017-06-17,Paysandu,Juventude,0,0
+8,2017-06-17,CRB,Londrina,0,3
+8,2017-06-17,Brasil de Pelotas,Vila Nova,3,0
+8,2017-06-17,Oeste,América-MG,0,0
+9,2017-06-20,Náutico,Goiás,2,3
+9,2017-06-20,Juventude,Brasil de Pelotas,1,2
+9,2017-06-20,América-MG,Santa Cruz,1,0
+9,2017-06-20,ABC,CRB,1,3
+9,2017-06-20,Figueirense,Luverdense,2,3
+9,2017-06-20,Londrina,Criciúma,0,1
+9,2017-06-20,Paysandu,Boa Esporte,0,0
+9,2017-06-20,Vila Nova,Ceará,1,1
+9,2017-06-20,Guarani,Oeste,0,0
+9,2017-06-20,Internacional,Paraná,0,0
+10,2017-06-23,CRB,Paysandu,2,1
+10,2017-06-23,Boa Esporte,ABC,2,1
+10,2017-06-23,Criciúma,Paraná,2,1
+10,2017-06-23,Luverdense,América-MG,0,3
+10,2017-06-24,Ceará,Oeste,3,0
+10,2017-06-24,Santa Cruz,Figueirense,1,1
+10,2017-06-24,Goiás,Vila Nova,0,2
+10,2017-06-24,Brasil de Pelotas,Internacional,0,1
+10,2017-06-24,Londrina,Juventude,2,2
+10,2017-06-24,Guarani,Náutico,2,1
+11,2017-06-27,Juventude,Goiás,3,0
+11,2017-06-27,Figueirense,Londrina,3,1
+11,2017-06-30,Paysandu,Luverdense,1,1
+11,2017-06-30,Vila Nova,Criciúma,0,0
+11,2017-06-30,Náutico,CRB,0,1
+11,2017-07-01,Oeste,Santa Cruz,2,0
+11,2017-07-01,Paraná,Ceará,1,0
+11,2017-07-01,Internacional,Boa Esporte,0,1
+11,2017-07-01,ABC,Guarani,0,1
+11,2017-07-01,América-MG,Brasil de Pelotas,3,0
+12,2017-07-04,Paysandu,Londrina,1,2
+12,2017-07-04,ABC,Náutico,0,1
+12,2017-07-07,Santa Cruz,Brasil de Pelotas,3,0
+12,2017-07-07,Goiás,Luverdense,3,1
+12,2017-07-07,Paraná,América-MG,1,1
+12,2017-07-08,Figueirense,Ceará,0,2
+12,2017-07-08,Internacional,Criciúma,1,1
+12,2017-07-08,Oeste,Vila Nova,2,2
+12,2017-07-08,Juventude,Guarani,2,0
+12,2017-07-08,Boa Esporte,CRB,0,0
+13,2017-07-11,Criciúma,Paysandu,1,1
+13,2017-07-11,Brasil de Pelotas,Oeste,3,1
+13,2017-07-11,Londrina,ABC,3,1
+13,2017-07-11,Ceará,Internacional,0,2
+13,2017-07-11,Vila Nova,Paraná,3,2
+13,2017-07-11,Guarani,Goiás,1,0
+13,2017-07-11,América-MG,Boa Esporte,2,0
+13,2017-07-11,Náutico,Juventude,1,1
+13,2017-07-11,Luverdense,Santa Cruz,2,2
+13,2017-07-11,CRB,Figueirense,2,1
+14,2017-07-14,Brasil de Pelotas,Figueirense,1,2
+14,2017-07-14,Oeste,Paraná,2,0
+14,2017-07-14,Criciúma,Goiás,1,0
+14,2017-07-15,Náutico,Santa Cruz,0,0
+14,2017-07-15,Vila Nova,Paysandu,1,2
+14,2017-07-15,América-MG,Guarani,0,0
+14,2017-07-15,CRB,Internacional,2,0
+14,2017-07-15,Ceará,Juventude,2,0
+14,2017-07-15,Londrina,Boa Esporte,2,2
+14,2017-07-15,Luverdense,ABC,1,0
+15,2017-07-18,Figueirense,Oeste,0,0
+15,2017-07-18,Juventude,CRB,1,1
+15,2017-07-18,Paraná,Brasil de Pelotas,4,1
+15,2017-07-18,Paysandu,Náutico,1,0
+15,2017-07-18,ABC,América-MG,0,1
+15,2017-07-18,Santa Cruz,Vila Nova,1,0
+15,2017-07-18,Goiás,Londrina,0,1
+15,2017-07-18,Guarani,Ceará,2,2
+15,2017-07-18,Boa Esporte,Criciúma,2,0
+15,2017-07-18,Internacional,Luverdense,1,0
+16,2017-07-21,América-MG,Figueirense,4,2
+16,2017-07-21,Santa Cruz,Boa Esporte,1,1
+16,2017-07-21,Luverdense,Paraná,1,1
+16,2017-07-21,Ceará,Goiás,0,1
+16,2017-07-22,Criciúma,ABC,2,1
+16,2017-07-22,Vila Nova,Internacional,2,1
+16,2017-07-22,Londrina,Náutico,0,0
+16,2017-07-22,Oeste,Juventude,3,0
+16,2017-07-22,Brasil de Pelotas,Paysandu,2,1
+16,2017-07-22,CRB,Guarani,1,1
+17,2017-07-25,ABC,Brasil de Pelotas,,
+17,2017-07-25,Internacional,Oeste,,
+17,2017-07-28,Juventude,América-MG,,
+17,2017-07-28,Paysandu,Ceará,,
+17,2017-07-29,Figueirense,Vila Nova,,
+17,2017-07-29,Goiás,CRB,,
+17,2017-07-29,Guarani,Londrina,,
+17,2017-07-29,Paraná,Santa Cruz,,
+17,2017-07-29,Náutico,Criciúma,,
+17,2017-07-29,Boa Esporte,Luverdense,,
+18,2017-08-01,Figueirense,Juventude,,
+18,2017-08-01,Brasil de Pelotas,Boa Esporte,,
+18,2017-08-01,Paraná,CRB,,
+18,2017-08-01,Santa Cruz,Paysandu,,
+18,2017-08-01,Vila Nova,Náutico,,
+18,2017-08-01,Oeste,ABC,,
+18,2017-08-01,América-MG,Londrina,,
+18,2017-08-01,Ceará,Criciúma,,
+18,2017-08-01,Luverdense,Guarani,,
+18,2017-08-01,Internacional,Goiás,,
+19,2017-08-04,Criciúma,Brasil de Pelotas,,
+19,2017-08-04,Náutico,Luverdense,,
+19,2017-08-04,Goiás,Oeste,,
+19,2017-08-04,CRB,América-MG,,
+19,2017-08-05,ABC,Ceará,,
+19,2017-08-05,Guarani,Internacional,,
+19,2017-08-05,Juventude,Santa Cruz,,
+19,2017-08-05,Londrina,Vila Nova,,
+19,2017-08-05,Boa Esporte,Paraná,,
+19,2017-08-05,Paysandu,Figueirense,,
+20,2017-08-12,Ceará,CRB,,
+20,2017-08-12,Santa Cruz,Criciúma,,
+20,2017-08-12,Figueirense,Goiás,,
+20,2017-08-12,Vila Nova,Boa Esporte,,
+20,2017-08-12,América-MG,Náutico,,
+20,2017-08-12,Oeste,Paysandu,,
+20,2017-08-12,Brasil de Pelotas,Guarani,,
+20,2017-08-12,Paraná,ABC,,
+20,2017-08-12,Luverdense,Juventude,,
+20,2017-08-12,Internacional,Londrina,,
+21,2017-08-19,ABC,Internacional,,
+21,2017-08-19,Náutico,Figueirense,,
+21,2017-08-19,Criciúma,Oeste,,
+21,2017-08-19,Goiás,América-MG,,
+21,2017-08-19,Guarani,Santa Cruz,,
+21,2017-08-19,Juventude,Vila Nova,,
+21,2017-08-19,Londrina,Brasil de Pelotas,,
+21,2017-08-19,Boa Esporte,Ceará,,
+21,2017-08-19,Paysandu,Paraná,,
+21,2017-08-19,CRB,Luverdense,,
+22,2017-08-26,Ceará,Náutico,,
+22,2017-08-26,Santa Cruz,CRB,,
+22,2017-08-26,Figueirense,Guarani,,
+22,2017-08-26,Vila Nova,ABC,,
+22,2017-08-26,Oeste,Boa Esporte,,
+22,2017-08-26,Brasil de Pelotas,Goiás,,
+22,2017-08-26,Paraná,Juventude,,
+22,2017-08-26,América-MG,Criciúma,,
+22,2017-08-26,Luverdense,Londrina,,
+22,2017-08-26,Internacional,Paysandu,,
+23,2017-09-09,ABC,Santa Cruz,,
+23,2017-09-09,Náutico,Brasil de Pelotas,,
+23,2017-09-09,Criciúma,Luverdense,,
+23,2017-09-09,Goiás,Paraná,,
+23,2017-09-09,Juventude,Internacional,,
+23,2017-09-09,Guarani,Vila Nova,,
+23,2017-09-09,Londrina,Ceará,,
+23,2017-09-09,Boa Esporte,Figueirense,,
+23,2017-09-09,Paysandu,América-MG,,
+23,2017-09-09,CRB,Oeste,,
+24,2017-09-16,Ceará,América-MG,,
+24,2017-09-16,Santa Cruz,Goiás,,
+24,2017-09-16,Criciúma,Juventude,,
+24,2017-09-16,Vila Nova,Luverdense,,
+24,2017-09-16,Oeste,Náutico,,
+24,2017-09-16,Brasil de Pelotas,CRB,,
+24,2017-09-16,Paraná,Londrina,,
+24,2017-09-16,Boa Esporte,Guarani,,
+24,2017-09-16,Paysandu,ABC,,
+24,2017-09-16,Internacional,Figueirense,,
+25,2017-09-23,Ceará,Brasil de Pelotas,,
+25,2017-09-23,Náutico,Internacional,,
+25,2017-09-23,Figueirense,ABC,,
+25,2017-09-23,Goiás,Paysandu,,
+25,2017-09-23,Guarani,Paraná,,
+25,2017-09-23,Juventude,Boa Esporte,,
+25,2017-09-23,Londrina,Santa Cruz,,
+25,2017-09-23,América-MG,Vila Nova,,
+25,2017-09-23,Luverdense,Oeste,,
+25,2017-09-23,CRB,Criciúma,,
+26,2017-09-26,ABC,Juventude,,
+26,2017-09-26,Santa Cruz,Ceará,,
+26,2017-09-26,Criciúma,Figueirense,,
+26,2017-09-26,Vila Nova,CRB,,
+26,2017-09-26,Oeste,Londrina,,
+26,2017-09-26,Brasil de Pelotas,Luverdense,,
+26,2017-09-26,Paraná,Náutico,,
+26,2017-09-26,Boa Esporte,Goiás,,
+26,2017-09-26,Paysandu,Guarani,,
+26,2017-09-26,Internacional,América-MG,,
+27,2017-09-30,ABC,Goiás,,
+27,2017-09-30,Náutico,Boa Esporte,,
+27,2017-09-30,Figueirense,Paraná,,
+27,2017-09-30,Vila Nova,Brasil de Pelotas,,
+27,2017-09-30,Guarani,Criciúma,,
+27,2017-09-30,Juventude,Paysandu,,
+27,2017-09-30,Londrina,CRB,,
+27,2017-09-30,América-MG,Oeste,,
+27,2017-09-30,Luverdense,Ceará,,
+27,2017-09-30,Internacional,Santa Cruz,,
+28,2017-10-03,Ceará,Vila Nova,,
+28,2017-10-03,Santa Cruz,América-MG,,
+28,2017-10-03,Criciúma,Londrina,,
+28,2017-10-03,Goiás,Náutico,,
+28,2017-10-03,Oeste,Guarani,,
+28,2017-10-03,Brasil de Pelotas,Juventude,,
+28,2017-10-03,Paraná,Internacional,,
+28,2017-10-03,Boa Esporte,Paysandu,,
+28,2017-10-03,Luverdense,Figueirense,,
+28,2017-10-03,CRB,ABC,,
+29,2017-10-14,ABC,Boa Esporte,,
+29,2017-10-14,Náutico,Guarani,,
+29,2017-10-14,Figueirense,Santa Cruz,,
+29,2017-10-14,Vila Nova,Goiás,,
+29,2017-10-14,Oeste,Ceará,,
+29,2017-10-14,Juventude,Londrina,,
+29,2017-10-14,Paraná,Criciúma,,
+29,2017-10-14,América-MG,Luverdense,,
+29,2017-10-14,Paysandu,CRB,,
+29,2017-10-14,Internacional,Brasil de Pelotas,,
