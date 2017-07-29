@@ -2,6 +2,7 @@ import sys
 import os
 import logging
 
+import json
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -25,6 +26,7 @@ def main(argv=None):
     print(data.standings())
 
     acc = defaultdict(list)
+    acc2 = defaultdict(lambda :defaultdict(int))
 
     N = int(argv[2])
     for n in range(N):
@@ -35,6 +37,7 @@ def main(argv=None):
             position = standings.index.get_loc(key) + 1
 
             acc[key].append(position)
+            acc2[key][position] += 1
 
 
     # print(acc)
@@ -42,6 +45,11 @@ def main(argv=None):
     print(results.describe())
     results.to_csv('data.csv')
 
+    json_str = json.dumps(acc2, sort_keys=True, indent=4)
+    print(json_str)
+
+    with open('data.json', 'w') as handle:
+        json.dump(acc2, handle, sort_keys=True, indent=4)
 
 if __name__ == "__main__":
     main()
