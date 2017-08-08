@@ -1,6 +1,8 @@
 import sys
 import os
 import logging
+import cProfile
+import argparse
 
 import json
 import pandas as pd
@@ -11,26 +13,10 @@ from collections import defaultdict
 
 from elo.db import Championship
 
-def main(argv=None):
 
-    if argv is None:
-        argv = sys.argv
-
-    try:
-        path = argv[1]
-    except IndexError as e:
-        logging.critical("You must provide a path")
-        sys.exit(1)
-
-    data = Championship.from_directory(argv[1])
-    print(data.standings())
-
-    acc = defaultdict(list)
-    acc2 = defaultdict(lambda :defaultdict(int))
-
-    N = int(argv[2])
-    for n in range(N):
-        print(n)
+def simulate(data, n, acc, acc2):
+    for i in range(n):
+        print(i)
         standings = data.play_matches(n=500).standings()
 
         for key in standings.index:
@@ -39,7 +25,35 @@ def main(argv=None):
             acc[key].append(position)
             acc2[key][position] += 1
 
+def main(argv=None):
 
+    parser = argparse.ArgumentParser(
+        description='Simulates future matches.')
+    parser.add_argument('path', metavar='PATH', help='database path')
+    parser.add_argument('--number', dest='iterations', action='store',
+        type=int, default=100, help='Number of iterations')
+    parser.add_argument('--profile', dest='profile', action='store_true',
+            default=False, help='Enable profiling')
+
+    args = parser.parse_args()
+
+    data = Championship.from_directory(args.path)
+    print(data.standings())
+    current = data.current_ranking()
+
+    for i, key in enumerate(sorted(current, key=lambda k: current[k], reverse=True)):
+        print(i+1, key, current[key])
+
+    acc = defaultdict(list)
+    acc2 = defaultdict(lambda :defaultdict(int))
+
+    N = args.iterations
+    if args.profile:
+        print("Starting profiling...")
+        cProfile.runctx('simulate(data, N, acc, acc2)', globals(), locals(), filename='simulate_stats')
+        print("Done profiling.")
+    else:
+        simulate(data, N, acc, acc2)
     # print(acc)
     results = pd.DataFrame(acc)
     print(results.describe())
